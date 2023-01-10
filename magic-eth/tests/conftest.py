@@ -24,8 +24,8 @@ def token(Token, accounts):
 
 
 @pytest.fixture
-def wand(token, ETHWand, accounts):
-    wand = ETHWand.deploy(token, {"from": accounts[0]})
+def wand(token, SwapWand, accounts):
+    wand = SwapWand.deploy(token, {"from": accounts[0]})
     token.set_wand(wand, {"from": token.deployer()})
     return wand
 
@@ -44,8 +44,8 @@ def usd_stability_pool(StabilityPool, usd_token, token, accounts):
 
 
 @pytest.fixture
-def usd_wand(Wand, usd_token, token, usd_stability_pool, eth_oracle, accounts):
-    usd_wand = Wand.deploy(usd_token, token, usd_stability_pool, eth_oracle, 9000, 50, 2e20, 2e21, {"from": accounts[0]})
+def usd_wand(BorrowWand, usd_token, token, usd_stability_pool, eth_oracle, accounts):
+    usd_wand = BorrowWand.deploy(usd_token, token, usd_stability_pool, eth_oracle, 9000, 50, 2e20, 2e21, {"from": accounts[0]})
     usd_wand.set_rewards(usd_wand, {"from": usd_wand.deployer()})
     usd_token.set_wand(usd_wand, {"from": usd_token.deployer()})
     usd_stability_pool.set_wand(usd_wand, {"from": usd_stability_pool.deployer()})
