@@ -1,0 +1,109 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "description",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_roundId",
+          "type": "uint80"
+        }
+      ],
+      "name": "getRoundData",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint80"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint80"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "latestRoundData",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint80"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint80"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "contractName": "AggregatorV3Interface",
+  "offset": [
+    0,
+    438
+  ],
+  "sha1": "63898460b305250e75639d8a8ed344af77c00317",
+  "source": "# @version ^0.3.3\n\n\n@view\n@external\ndef decimals() -> uint8:\n    return 0\n\n\n@view\n@external\ndef description() -> String[1000]:\n    return \"\"\n\n\n@view\n@external\ndef version() -> uint256:\n    return 0\n\n\n@view\n@external\ndef getRoundData(_roundId: uint80) -> (uint80, int256, uint256, uint256, uint80):\n    return (0, 0, 0, 0, 0)\n\n\n@view\n@external\ndef latestRoundData() -> (uint80, int256, uint256, uint256, uint80):\n    return (0, 0, 0, 0, 0)",
+  "type": "interface"
+}
